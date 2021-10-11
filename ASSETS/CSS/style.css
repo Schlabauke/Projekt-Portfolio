@@ -64,7 +64,7 @@ main section:first-of-type p:first-of-type {
     padding-top: 15vh;
 }
 
-main section:first-of-type p:nth-of-type(3) {
+main section:first-of-type p {
     padding-top: 15vh;
     opacity: 1;
 }
@@ -83,15 +83,15 @@ main section:first-of-type p:last-child {
     font-size: 12em;
     padding-left: 75%;
 }
-main section:first-of-type p:nth-of-type(3):hover{
+/* Hover-Funktion */
+main section:first-of-type a:hover{
     color:black;
     background-color: #fff;
 }
-main section:first-of-type p:nth-of-type(3):hover + p:last-child {
+main section:first-of-type a:hover + p {
     color:white;
     opacity: 1;
-
-}
+} /* Hier unktioniert irgendwas nicht. Pfad zu ungenau?! Problem, dass es in ein <p> gewrappt ist?! Div/Span besser,weil zu viele <p>? */
 
 /* Main Style RollR */
 
@@ -139,6 +139,12 @@ main section:nth-of-type(2) p:last-child {
     font-size: 12em;
     padding-left: 75%;
 }
+/* Hover-Funktion */
+main section:nth-of-type(2) a:hover{
+    color:white;
+    background-color: #000;
+}
+
 /* Main Style Galitos */
 main section:nth-of-type(3) {
     background-image: url("../IMG/portfolio4.jpg");
@@ -184,6 +190,11 @@ main section:nth-of-type(3) p:last-child {
     font-size: 12em;
     padding-left: 75%;
     }
+/* Hover-Funktion */
+main section:nth-of-type(3) a:hover{
+    color:#000;
+    background-color: #fff;
+}
 
 /* Main Style Tretto */
 main section:nth-of-type(4) {
@@ -230,6 +241,12 @@ main section:nth-of-type(4) p:last-child {
     font-size: 12em;
     padding-left: 75%;
 }
+/* Hover-Funktion */
+main section:nth-of-type(4) a:hover{
+    color:white;
+    background-color: #000;
+}
+
 /* Main Style What More? */
 main section:nth-of-type(5) {
     background:#000 center/cover no-repeat;
@@ -270,4 +287,19 @@ footer {
 footer a {
     text-decoration: none;
     color:black;
+}
+footer :hover{
+    text-decoration: underline;
+}
+/* Herz Animation */
+footer div {  
+    font-size: 10%;
+    animation-name: beating;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+@keyframes beating {
+    from{font-size: 10%;}
+    to{font-size:13%;}
 }
